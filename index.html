@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#142d38" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%233c6964'/%3E%3Cpath d='M20 6l3.3 10.7L34 20l-10.7 3.3L20 34l-3.3-10.7L6 20l10.7-3.3z' fill='%23f8e5ac'/%3E%3C/svg%3E" />
+  <title>Stillwater — First Light</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell" aria-label="Stillwater, a peaceful mountain exploration game">
+    <canvas id="world" aria-label="A peaceful mountain valley at sunrise"></canvas>
+    <div class="vignette"></div>
+    <header class="topbar">
+      <a class="wordmark" href="#" aria-label="Stillwater home"><span class="brand-mark">✳</span> STILLWATER</a>
+      <div class="top-actions">
+        <div class="find-count" aria-live="polite"><span class="sparkle">✦</span><span id="count">0</span><span class="count-divider">/</span>6 <span class="find-label">glimmers</span></div>
+        <button id="sound-toggle" class="icon-button" aria-label="Turn peaceful music on" title="Peaceful music"><span id="sound-icon">♪</span></button>
+      </div>
+    </header>
+    <section class="intro" id="intro">
+      <div class="intro-eyebrow"><span></span> A LITTLE JOURNEY AT FIRST LIGHT <span></span></div>
+      <h1>Where the river<br><em>remembers the sky.</em></h1>
+      <p>Follow the water through a quiet valley.<br>Gather the morning glimmers, and take your time.</p>
+      <button id="begin" class="begin-button">Begin your walk <span>→</span></button>
+      <div class="intro-hint">A peaceful little world · no rush, no wrong turns</div>
+    </section>
+    <aside class="quest" id="quest" aria-live="polite"><span class="quest-dot"></span><span id="quest-text">Wander the riverbank and find the glimmers</span></aside>
+    <div class="controls-hint" id="controls-hint"><span>←</span><span>→</span><small>to wander</small><span class="hint-sep"></span><span class="key">SPACE</span><small>to pause</small></div>
+    <div class="touch-controls" aria-label="Movement controls"><button id="left" aria-label="Walk left">←</button><button id="right" aria-label="Walk right">→</button></div>
+    <div class="pause-screen" id="pause-screen"><div class="pause-card"><span class="pause-icon">❋</span><h2>Take a breath.</h2><p>The valley will be right here.</p><button id="resume">Keep wandering <span>→</span></button></div></div>
+    <div class="toast" id="toast" role="status"></div>
+    <footer class="bottom-note"><span>THE HIGH VALLEY</span><span class="footer-line"></span><span>DAY 01 · DAWN</span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
